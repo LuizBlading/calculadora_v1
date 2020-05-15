@@ -1,24 +1,40 @@
-function insert(num) {
-    // Pega o valor do botão clicado e insere na caixa de texto
-    // pega o valor vazio do textview e soma com o valor da var num, 
-    // que esta passada como argumento no botão html
-    document.form.textview.value = document.form.textview.value + num
+function soma() {
+
+    var num1 = document.querySelector('#num1').value;
+    var num2 = document.querySelector('#num2').value;
+    var soma = parseInt(num1) + parseInt(num2);
+
+    console.log(soma);
+    document.querySelector('#resultado').value = soma;
 }
 
-function equal() {
-    var exp = document.form.textview.value;
-    if (exp) {
-        document.form.textview.value = eval(exp);
-    }
+function subtracao(){
+    var num1 = document.querySelector('#num1').value;
+    var num2 = document.querySelector('#num2').value;
+
+    var sub = parseInt(num1) - parseInt(num2);
+
+    console.log(sub);
+    document.querySelector('#resultado').value = sub;
 }
 
-function clean() {
-    // Limpa a caixa de texto
-    document.form.textview.value = "";
+function multiplicacao(){
+    var num1 = document.querySelector('#num1').value;
+    var num2 = document.querySelector('#num2').value;
+
+    var multi = parseInt(num1) * parseInt(num2);
+
+    console.log(multi);
+    document.querySelector('#resultado').value = multi;
 }
 
-function back() {
-    var exp = document.form.textview.value;
-    // faz apagar o oque foi escrito
-    document.form.textview.value = exp.substring(0, exp.length - 1);
+function divisao(){
+    var num1 = document.querySelector('#num1').value;
+    var num2 = document.querySelector('#num2').value;
+
+    var divi = parseFloat(num1) / parseFloat(num2);
+
+    console.log(divi);
+    document.querySelector('#resultado').value = divi;
 }
+
