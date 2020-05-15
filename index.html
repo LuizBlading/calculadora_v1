@@ -1,54 +1,44 @@
+<!Doctype html>
+
 <html>
+    <head>
+        <title>Calculadora</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale, maximum-scale=1"> 
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
 
-<head>
-    <title>Calculadora</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js"></script>
-</head>
+    <body>
+        <div class="form">
+            <h1>Calculadora</h1>
+            <form>
+                <div class="number1">
+                    <p>Digite o Primeiro Valor: </p>
+                    <input type="text" id="num1" value="" placeholder="Primeiro Valor">
+                </div>
 
-<body>
-    <div class="bg"></div>
-    <div class="main">
-        <form name="form">
-            <input class="textview" name="textview">
-        </form>
-        <table>
-            <tr>
-                <td><input class="button" type="button" value="C" onclick="clean()"></td>
-                <td><input class="button" type="button" value="<" onclick="back()"></td>
-                <td><input class="button" type="button" value="/" onclick="insert('/')"></td>
-                <td><input class="button" type="button" value="x" onclick="insert('x')"></td>
-            </tr>
+                <div class="number2">
+                    <p>Digite o Segundo Valor: </p>
+                    <input type="text" id="num2" value="" placeholder="Segundo Valor">
+                </div>
 
-            <tr>
-                <td><input class="button" type="button" value="7" onclick="insert(7)"></td>
-                <td><input class="button" type="button" value="8" onclick="insert(8)"></td>
-                <td><input class="button" type="button" value="9" onclick="insert(9)"></td>
-                <td><input class="button" type="button" value="-" onclick="insert('-')"></td>
-            </tr>
+                <div class="result">
+                    <p>Resultado:</p>
+                    <input type="text" id="resultado" value="" placeholder="Resultado">
+                </div>
+                
+                <div>
+                    <input class="buttons" id="Soma" onclick="soma()" type="button" value="+">
 
-            <tr>
-                <td><input class="button" type="button" value="4" onclick="insert(4)"></td>
-                <td><input class="button" type="button" value="5" onclick="insert(5)"></td>
-                <td><input class="button" type="button" value="6" onclick="insert(6)"></td>
-                <td><input class="button" type="button" value="+" onclick="insert('+')"></td>
-            </tr>
+                    <input class="buttons" id="sub" onclick="subtracao()" type="button" value="-">
 
-            <tr>
-                <td><input class="button" type="button" value="1" onclick="insert(1)"></td>
-                <td><input class="button" type="button" value="2" onclick="insert(2)"></td>
-                <td><input class="button" type="button" value="3" onclick="insert(3)"></td>
-                <td rowspan="5"><input id="equal" class="button" type="button" value="=" onclick="equal()"></td>
-            </tr>
+                    <input class="buttons" id="multi" onclick="multiplicacao()" type="button" value="x">
 
-            <tr>
-                <td colspan="2"><input id="zero" class="button" type="button" value="0" onclick="insert(0)"></td>
-                <td><input class="button" type="button" value="." onclick="insert('.')"></td>
-            </tr>
-        </table>
-    </div>
-</body>
+                    <input class="buttons" id="div" onclick="divisao()" type="button" value="/">
+                </div>
+            </form>
+        </div>
 
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
 </html>
